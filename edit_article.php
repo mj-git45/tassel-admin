@@ -189,23 +189,23 @@ else
 				</tr>
 				
 				<tr class="tr hover">
-					<td>Titre</td>
+					<td>Title</td>
 					<td><?php echo $article -> titre; ?></td>
 					<td><button class="reset_btn" onclick="reset_title()"><i class="fa fa-times"></i></button><div class="clear"></div><input type="text" maxlength="100" name="new_title" form="form_edit" placeholder="Le nouveau titre de l'article" style="width:500px" id="new_title"></td>
 				</tr>
 				<tr class="tr hover">
 					<td>Thumbnail</td>
-					<td><img src="../../img/articles/<?php echo $article -> miniature ?>"></td>
+					<td><img src="../../img/articles/<?php echo $article -> miniature; ?>"></td>
 					<td>
 						<button class="reset_btn" onclick="reset_minia()"><i class="fa fa-times"></i></button>
 						<div class="clear"></div>
 						<img src="" alt="Preview miniature" id="preview_minia" >
-						<button id="btn_input" onclick="document.getElementById('upload_minia').click()">Changer de Miniature</button>
+						<button id="btn_input" onclick="document.getElementById('upload_minia').click()">Change Thumbnail</button>
 					</td>
 				</tr>
 				<tr class="tr hover">
 					<td>Content</td>
-					<td id="content_article"><?php echo $article -> content ?></td>
+					<td id="content_article"><?php echo $article -> content; ?></td>
 					<td><button class="reset_btn" onclick="reset_content()"><i class="fa fa-times"></i></button><div class="clear"></div><textarea rows="10" cols="5" form="form_edit" placeholder="Le nouveau contenu de l'article" id="new_content" name="new_content"></textarea></td>
 				</tr>
 			</table>
