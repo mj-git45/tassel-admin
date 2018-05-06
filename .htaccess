@@ -1,0 +1,11 @@
+<FilesMatch connexion_bdd.php>
+
+AuthUserFile "/home/lesiteders/www/admin/backoffice/fichiers/connexion_bdd.htpasswd"
+
+AuthName "Accès restreint"
+
+AuthType Basic
+
+require valid-user
+
+</FilesMatch>
