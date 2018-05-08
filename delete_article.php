@@ -32,7 +32,7 @@ else
 	<!-- CSS styles -->
 	<link rel="stylesheet" href="../../styles/style.backoffice.css">
 	<link rel="stylesheet" href="../../styles/style.responsive.theme.css">
-	<link rel="stylesheet" href="../../styles/edit_article.css">
+	<link rel="stylesheet" href="../../styles/delete_article.css">
 </head>
 <body id="dash">
 	<!-- navigation -->
@@ -161,6 +161,9 @@ else
 			echo '<h4 style="margin:0;">Currently deleting : '. $article -> titre.'</h4>';
 
 			?>
+            <form action="control/delete_article.php" method="post">
+				<input type="hidden" name="id_article" value="<?php echo $article -> id_article ?>">
+			</form>
 
 			<div class="content-box">
                 <table class="full width">
@@ -169,10 +172,23 @@ else
                     <col width="70%">
                 </colgroup>
                     <tr>
-                        <th></th>
-                        <th>
+                        <td>Title</td>
+                        <td><?php echo $article -> titre; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Thumbnail</td>
+                        <td><?php echo $article -> miniature; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Content</td>
+                        <td><?php echo $article -> content; ?></td>
                     </tr>
                 </table>
+
+                <div class="tooltip">
+                    <input type="submit" name="send_delete" value="Delete article" class="full width" form="form_delete" style="font_weight:bold;">
+                    <pan class="tooltiptext"><strong>Warning : </strong>If you delete this article you <strong>won't</strong> be able to retrieve it !</span>
+                </div>
 			</div>
 			</div>
 		</div>
@@ -184,6 +200,5 @@ else
 	<script src="../../js/jquery.dropdown.menu.js"></script>
 	<script src="../../js/nanobar.min.js"></script>
 	<script src="../../js/custom.js"></script>
-	<script src="../../js/edit_article.js"></script>
 </body>
 </html>
