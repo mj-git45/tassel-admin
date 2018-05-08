@@ -161,7 +161,7 @@ else
 			echo '<h4 style="margin:0;">Currently deleting : '. $article -> titre.'</h4>';
 
 			?>
-            <form action="control/delete_article.php" method="post">
+            <form action="control/delete_article.php" method="post" id="form_delete">
 				<input type="hidden" name="id_article" value="<?php echo $article -> id_article ?>">
 			</form>
 

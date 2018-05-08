@@ -7,15 +7,6 @@ if ($_SESSION['logged'] === FALSE)
 {
 	header('Location:../../index.php');
 	exit(0);
-} 
-
-else
-{
-	unset($_SESSION['compte'] -> password);
-	foreach ($_SESSION['compte'] as $key => $value)
-				{
-					$compte[$key] = $value;
-				}
 }
 
 if (isset($_POST['send_edit']))
